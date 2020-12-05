@@ -1,0 +1,29 @@
+vi. dic. 4 16:27:53 2020   R1   Router>enable
+vi. dic. 4 16:27:53 2020   R1   Router#configure terminal
+vi. dic. 4 16:27:53 2020   R1   Router(config)#interface FastEthernet0/0
+vi. dic. 4 16:28:14 2020   R1   Router(config-if)#ip address 192.168.0.1 255.255.255.224
+vi. dic. 4 16:28:15 2020   R1   Router(config-if)#ip address 192.168.0.1 255.255.255.224
+vi. dic. 4 16:28:16 2020   R1   Router(config-if)#no shutdown
+vi. dic. 4 16:28:40 2020   R1   Router(config-if)#exit
+vi. dic. 4 16:28:40 2020   R1   Router(config)#interface Serial0/0/0
+vi. dic. 4 16:28:54 2020   R1   Router(config-if)#ip address 192.168.0.49 255.255.255.252
+vi. dic. 4 16:28:54 2020   R1   Router(config-if)#no shutdown
+vi. dic. 4 16:29:03 2020   R2   Router>enable
+vi. dic. 4 16:29:03 2020   R2   Router#configure terminal
+vi. dic. 4 16:29:03 2020   R2   Router(config)#interface Serial0/0/0
+vi. dic. 4 16:29:13 2020   R2   Router(config-if)#ip address 192.168.0.50 255.255.255.252
+vi. dic. 4 16:29:13 2020   R2   Router(config-if)#no shutdown
+vi. dic. 4 16:29:14 2020   R2   Router(config-if)#exit
+vi. dic. 4 16:29:14 2020   R2   Router(config)#interface FastEthernet0/0
+vi. dic. 4 16:29:40 2020   R2   Router(config-if)#ip address 192.168.0.33 255.255.255.240
+vi. dic. 4 16:29:40 2020   R2   Router(config-if)#no shutdown
+vi. dic. 4 16:45:51 2020   R1   Router>enable
+vi. dic. 4 16:45:51 2020   R1   Router#configure terminal
+vi. dic. 4 16:46:26 2020   R1   Router(config)#ip route 192.168.0.32 255.255.255.240 192.168.0.50
+vi. dic. 4 16:46:40 2020   R2   Router>enable
+vi. dic. 4 16:46:40 2020   R2   Router#configure terminal
+vi. dic. 4 16:51:28 2020   R2   Router(config)#ip route 192.168.0.0 255.255.255.224 192.168.0.49
+vi. dic. 4 18:06:02 2020   R1   Router>en
+vi. dic. 4 18:06:06 2020   R1   Router#show ip route
+vi. dic. 4 18:06:39 2020   R2   Router>en
+vi. dic. 4 18:06:42 2020   R2   Router#show ip route
